@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#35536b"/></marker></defs>
+<rect width="1600" height="1040" fill="#f7f9fb"/>
+<g font-family="Arial" fill="#152f42"><text x="70" y="70" font-size="38" font-weight="bold">CondoCarga — arquitetura proposta</text><text x="70" y="112" font-size="23">Sprint 01: pesquisa e decisões • Protótipo planejado para a Sprint 02</text></g>
+<g font-family="Arial" font-size="24" fill="#152f42" stroke="#c4d0d9" stroke-width="2">
+<rect x="60" y="155" width="1480" height="140" rx="10" fill="#e8eef4"/>
+<rect x="60" y="350" width="1480" height="125" rx="10" fill="#edf3f6"/>
+<rect x="60" y="535" width="1480" height="240" rx="10" fill="#ffffff"/>
+<rect x="60" y="845" width="1480" height="120" rx="10" fill="#e6f1ee"/>
+</g>
+<g font-family="Arial" fill="#152f42" font-size="23">
+<text x="85" y="192" font-weight="bold">1  FÍSICA</text><text x="310" y="197">GoodWe HCA G2 • cartão RFID • medição de energia</text>
+<text x="310" y="238">Referência do equipamento; integração real depende de documentação e acesso</text>
+<text x="85" y="391" font-weight="bold">2  CONECTIVIDADE</text><text x="390" y="391">Adaptador GoodWe futuro</text><text x="990" y="391" font-weight="bold">JSON sintético interno</text>
+<text x="390" y="433">Normalização de identificadores, unidades, horários e origem dos registros</text>
+<text x="85" y="575" font-weight="bold">3  APLICAÇÃO</text>
+<text x="340" y="575">Python: validação de sessões e fila</text><text x="1030" y="575">SQLite: histórico persistente</text>
+<text x="340" y="645" font-weight="bold">Cobrança determinística</text><text x="340" y="686">Energia medida × tarifa</text><text x="340" y="727">Consolidação mensal por unidade</text>
+<text x="1030" y="645" font-weight="bold">Análise e recomendação</text><text x="1030" y="686">Histórico horário + regressão</text><text x="1030" y="727">Comparação com média histórica</text>
+<text x="85" y="887" font-weight="bold">4  APRESENTAÇÃO</text><text x="390" y="887">Streamlit: morador e síndico</text><text x="390" y="929">Histórico • fechamento e exportação • horários sugeridos sem reserva</text>
+<text x="70" y="1010" font-size="21">A IA orienta horários. Não estima cobrança nem controla potência. Dados simulados identificados na interface.</text>
+</g>
+<g stroke="#35536b" stroke-width="3" fill="none" marker-end="url(#a)">
+<path d="M650 295 V350" stroke-dasharray="8 6"/><path d="M1180 475 V535"/><path d="M650 475 V535"/>
+<path d="M550 585 V614"/><path d="M1180 585 V614"/><path d="M550 775 V845"/><path d="M1180 775 V845"/>
+</g></svg>
