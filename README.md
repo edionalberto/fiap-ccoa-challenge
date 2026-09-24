@@ -10,8 +10,6 @@ Pesquisa e proposta de gestão de recargas compartilhadas em condomínios
 
 O CondoCarga propõe relacionar cada sessão de recarga ao apartamento responsável, calcular seu consumo e produzir um fechamento mensal conferível. A inteligência artificial apoiará a escolha de horários de menor demanda. Nesta sprint, apresento a pesquisa e as decisões que orientarão um protótipo na Sprint 02. Ainda não há sistema funcional, integração GoodWe validada ou resultados de um modelo treinado.
 
-Material de apoio à preparação: [guia de estudo e fala de 3 minutos](docs/guia-estudo.md) e [slide editável](docs/slide-3-minutos.pptx). Esses arquivos apoiam o estudo e não substituem a documentação da Sprint 01. O pitch posterior de validação técnica deverá refletir a implementação existente na data da prova.
-
 ## 1. Problema e recorte
 
 Um carregador compartilhado reúne usuários com necessidades diferentes em uma infraestrutura limitada. A gestão precisa saber quem utilizou o equipamento, quanto consumiu e como distribuir os valores. O morador precisa compreender sua cobrança e organizar o uso. Ter energia medida no carregador não basta: é necessário vincular a medição a uma sessão e a uma unidade.

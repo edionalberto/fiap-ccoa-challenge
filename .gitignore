@@ -4,3 +4,6 @@ __pycache__/
 *.db
 *.sqlite
 .env
+docs/guia-estudo.md
+docs/slide-3-minutos.pptx
+docs/slide-3-minutos.png
