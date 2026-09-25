@@ -6,7 +6,7 @@ Pesquisa e proposta de gestão de recargas compartilhadas em condomínios
 **Curso:** Ciência da Computação on-line, FIAP  
 **Challenge:** GoodWe 2026, trilha EV ChargeOps  
 **Etapa:** Sprint 01 — pesquisa e documentação  
-**Data da pesquisa:** 24 de setembro de 2026
+**Data da pesquisa:** 24 e 25 de setembro de 2026
 
 O CondoCarga propõe relacionar cada sessão de recarga ao apartamento responsável, calcular seu consumo e produzir um fechamento mensal conferível. A inteligência artificial apoiará a escolha de horários de menor demanda. Nesta sprint, apresento a pesquisa e as decisões que orientarão um protótipo na Sprint 02. Ainda não há sistema funcional, integração GoodWe validada ou resultados de um modelo treinado.
 
@@ -22,11 +22,17 @@ Os desafios operacionais considerados são identificação, disputa pelo uso, re
 
 ## 2. Frente 1 — Contexto e análise de mercado
 
-**Aprofundamento escolhido: opção A, análise de três soluções existentes.**
+**Aprofundamento escolhido: opção C, análise de dados públicos.** A comparação de três soluções, correspondente à opção A, permanece como pesquisa complementar.
+
+### O que é infraestrutura de recarga compartilhada
+
+É o conjunto de pontos de recarga, circuitos e proteções elétricas, medição, conectividade e regras de gestão que atende vários usuários. O compartilhamento pode ocorrer nas vagas, nos carregadores ou na capacidade elétrica disponível. Em condomínios, é necessário associar o uso ao apartamento. Em empresas e campi, a gestão pode distinguir funcionários, visitantes e veículos institucionais. Controle de acesso, disponibilidade, manutenção, filas e conferência dos custos são problemas comuns [2, 24–25].
+
+O risco operacional inclui veículos que permanecem na vaga após o fim da recarga, uso simultâneo acima da capacidade projetada e registros que não chegam ao sistema. Minha decisão é priorizar identificação, sessões e conferência do consumo no protótipo. A gestão elétrica e a segurança física continuam sob responsabilidade de equipamentos e profissionais habilitados. O software proposto não substitui essas proteções.
 
 ### Como uma sessão gera dados
 
-O modelo lógico adotado tem cinco momentos: conexão do veículo, identificação/autorização, início da transferência, acompanhamento e encerramento. Conectar o cabo não significa necessariamente que a energia já esteja sendo transferida. Na proposta, o registro terá estados próprios para distinguir sessão aberta de encerrada.
+O equipamento verifica condições de conexão e segurança antes de permitir o fornecimento. O modelo lógico adotado tem cinco momentos: conexão do veículo, identificação/autorização, início da transferência, acompanhamento e encerramento. Conectar o cabo não significa necessariamente que a energia já esteja sendo transferida. Na proposta, o registro terá estados próprios para distinguir sessão aberta de encerrada.
 
 O HCA G2 oferece início por aplicativo, RFID ou modo automático, conforme a ficha técnica [6]. No kickoff, a GoodWe explicou o registro do cartão e da energia utilizada [1]. A plataforma proposta vinculará o identificador a usuário e unidade, preservando essa associação na sessão.
 
@@ -38,7 +44,9 @@ O HCA G2 oferece início por aplicativo, RFID ou modo automático, conforme a fi
 | Encerramento | Horário e leitura final ou energia total documentada | Validar e normalizar consumo |
 | Fechamento | Sessões válidas, unidade e tarifa | Somar consumo e valores por mês |
 
-O caminho de captura real pode ser uma API autorizada ou uma interface documentada do equipamento. A existência física dessas conexões não confirma quais dados terceiros podem consultar. Na Sprint 02, eventos sintéticos exercitarão o mesmo modelo interno, sem simular uma API oficial inexistente.
+Ao encerrar por solicitação, conclusão ou interrupção, o sistema precisa registrar o motivo e a última medição confiável. O fim da transferência de energia não significa que a vaga foi desocupada. A ordem entre conexão e autorização pode variar conforme o equipamento.
+
+O medidor produz a leitura de energia; o controlador registra estados, horários e falhas. A plataforma associa esses eventos à sessão e à unidade. Em equipamentos compatíveis, OCPP conecta carregador e sistema de gestão [26]; uma API autorizada do fabricante é outro caminho. Isso não comprova suporte ou acesso OCPP no HCA G2 adotado pelo desafio. O caminho de captura real depende de uma interface documentada do equipamento. A existência física dessas conexões não confirma quais dados terceiros podem consultar. Na Sprint 02, eventos sintéticos exercitarão o mesmo modelo interno, sem simular uma API oficial inexistente.
 
 ### Soluções pesquisadas
 
@@ -63,6 +71,53 @@ As políticas documentadas pela ChargePoint incluem gratuidade, energia, tempo e
 | Rateio por consumo na cobrança condominial | Permite explicar o valor a partir das sessões | Requer política explícita para exceções e custos não medidos |
 
 **Escolha:** rateio do componente variável por consumo medido. Duas unidades com uso diferente devem receber valores diferentes. Não escolho divisão igual entre apartamentos porque ela desconsidera a energia efetivamente utilizada. Também não escolho cobrança por tempo no MVP porque velocidades de recarga diferentes poderiam produzir custos diferentes para a mesma energia.
+
+### Opção C — Análise de dados públicos
+
+Analiso indicadores publicados por ABVE/Tupi, ABVE Data e VoltBras, com referência internacional do DOE/AFDC para contextos de uso [21–25]. São publicações abertas, não uma coleta própria de sessões nem uma extração de microdados. A pergunta é: o crescimento e a distribuição da recarga justificam um sistema de gestão por unidade, e quais dados locais ainda faltam?
+
+#### Frota e crescimento do mercado brasileiro
+
+BEV é o veículo elétrico a bateria; PHEV é o híbrido com recarga externa. Ambos utilizam tomada. HEV e micro-híbridos não devem ser somados para estimar demanda por carregadores.
+
+| Indicador | Período | Resultado | Leitura e limite |
+|---|---|---:|---|
+| Frota plug-in informada pela ABVE/Tupi | Acumulado de 2022 a maio/2026 | 505.806 BEV + PHEV | Recorte declarado pela fonte, não censo integral da frota registrada [21] |
+| Vendas mensais de plug-in | Agosto/2025 | 15.681 | 7.624 BEV + 8.057 PHEV [22] |
+| Vendas mensais de plug-in | Agosto/2026 | 47.701 | 27.166 BEV + 20.535 PHEV [22] |
+| Variação das vendas mensais | Agosto/2026 sobre agosto/2025 | +204,2% | Cálculo próprio: `(47.701 / 15.681 - 1) × 100` |
+
+**Análise:** o estoque informado e a expansão das vendas sustentam a relevância do tema, mas o aumento de 204,2% é das vendas no mesmo mês de anos distintos. Não significa que a frota triplicou. Não estimei crescimento líquido da frota, pois isso exigiria uma série de estoques comparáveis e tratamento de baixas. Para dimensionar um condomínio, ainda é necessário levantar seus veículos, usuários e capacidade instalada.
+
+#### Distribuição dos pontos de recarga
+
+O levantamento ABVE/Tupi publicado em junho, com corte em maio/2026, informa 25.429 pontos públicos e semipúblicos, crescimento de 20,7% desde fevereiro. A composição é de 66% AC e 34% DC [21].
+
+| Região | Pontos em maio/2026 | Participação aproximada no total publicado |
+|---|---:|---:|
+| Sudeste | 11.079 | 43,6% |
+| Sul | 6.115 | 24,0% |
+| Nordeste | 4.542 | 17,9% |
+| Centro-Oeste | 2.840 | 11,2% |
+| Norte | 859 | 3,4% |
+
+Percentuais calculados sobre 25.429. A tabela original soma 25.435, seis pontos acima do total nacional publicado. Preservo os valores e explicito a divergência. Esse universo não inclui toda a recarga privada residencial nem equivale à disponibilidade em tempo real [21].
+
+**Análise:** a concentração regional impede usar uma média nacional para prever a facilidade de recarga de um morador. Número de pontos também não informa sozinho potência disponível, filas ou funcionamento. Por isso, mapas externos serão apoio futuro, enquanto o núcleo do CondoCarga usará registros do próprio condomínio. O recorte de maio foi mantido para relacionar frota e rede na mesma publicação, sem alegação de ser a estatística mais recente.
+
+#### Perfis de uso e qualidade da operação
+
+| Contexto de uso | Referência técnica | Consequência para a pesquisa do CondoCarga |
+|---|---|---|
+| Residencial | Recarga durante permanência prolongada no local [24] | Investigar chegada, saída e preferências dos moradores |
+| Empresa ou campus | Permanência associada à jornada e regras de acesso [25] | Não transportar automaticamente esses horários para um condomínio |
+| Viagens e deslocamentos | Recarga pública em corredores e necessidade de compatibilizar parada e potência [24] | Diferenciar conveniência de localização de disponibilidade real |
+
+Esses perfis são referências qualitativas do DOE/AFDC dos Estados Unidos, não percentuais de comportamento medidos no Brasil. O resumo público do Anuário VoltBras 2025 traz dados autodeclarados por 56 redes, com 1.249 carregadores em 25 estados e no DF. Relata fricções no início das sessões, conectividade e pagamento [23]. A amostra é de operadores e não representa estatisticamente moradores de condomínios.
+
+**Análise:** não há, nas fontes consultadas, uma distribuição nacional representativa de horários e duração de sessões condominiais. Essa lacuna impede afirmar um horário de pico brasileiro ou prometer redução de filas. Na Sprint 02, o histórico sintético será identificado como simulação. Em uma implantação, será necessário medir horários, duração, energia, falhas e, se houver registro de saída, ocupação após a recarga. Somente então será possível avaliar recomendações por horário.
+
+**Decisão decorrente da Opção C:** manter o escopo de um condomínio, assegurar a qualidade dos registros antes da previsão e comparar a IA com uma referência simples. Dados nacionais contextualizam a proposta; não substituem o histórico local necessário à recomendação.
 
 ## 3. Frente 2 — Ecossistema técnico e regulatório
 
@@ -232,7 +287,7 @@ Utilizei apoio de IA para organizar a pesquisa, comparar alternativas e revisar 
 
 ## 8. Fontes consultadas
 
-Consultas realizadas em 24/09/2026. Os links a documentação de bibliotecas usam a versão publicada no momento da consulta; a versão instalada será fixada na Sprint 02.
+Consultas iniciais realizadas em 24/09/2026 e complementação em 25/09/2026 (fontes 21–26). Os links a documentação de bibliotecas usam a versão publicada no momento da consulta; a versão instalada será fixada na Sprint 02.
 
 1. FIAP/GoodWe. Enunciado da Sprint 01 fornecido no AVA; playbook “1CC — EV Challenge GoodWe+FIAP 2026”, p. 7–10 e 13; apresentação GoodWe, p. 16; transcrição do kickoff de 08/04/2026, especialmente 39:30–40:25 e 45:33–50:04. Materiais fornecidos pelo aluno, não redistribuídos neste repositório.
 2. [ChargePoint — EV charging for condo properties](https://www.chargepoint.com/solutions/condos).
@@ -254,3 +309,10 @@ Consultas realizadas em 24/09/2026. Os links a documentação de bibliotecas usa
 18. [scikit-learn — LinearRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html).
 19. [scikit-learn — IsolationForest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html).
 20. [scikit-learn — TimeSeriesSplit](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html).
+
+21. [ABVE/Tupi — Recarga rápida cresce 33% em três meses](https://abve.org.br/recarga-rapida-dc-cresce-33-em-tres-meses-e-puxa-a-expansao-da-rede/). Publicado em 22/06/2026, corte em maio/2026. Divergência aritmética regional explicitada na análise.
+22. [ABVE — Emplacamentos de agosto de 2026](https://abve.org.br/com-57-mil-emplacamentos-em-agosto-eletrificados-abrem-a-corrida-para-o-milhao-em-setembro/). Publicado em 09/09/2026; utilizado para comparar BEV e PHEV em agosto/2025 e agosto/2026.
+23. [VoltBras — Anuário 2025: redes de recarga no Brasil](https://voltbras.com/anuario-voltbras-2025-redes-de-recarga/). Resumo público e metodologia da amostra de operadores; relatório integral não consultado.
+24. [DOE/AFDC — Charging Electric Vehicles in Public](https://afdc.energy.gov/fuels/electricity-charging-public). Referência dos EUA, sem extrapolar proporções de uso ao Brasil.
+25. [DOE/AFDC — Workplace Charging for Electric Vehicles](https://afdc.energy.gov/fuels/electricity-charging-workplace). Referência dos EUA para contexto corporativo.
+26. [Open Charge Alliance — Open Charge Point Protocol](https://openchargealliance.org/protocols/open-charge-point-protocol/). Protocolo entre estações e sistemas de gestão; compatibilidade GoodWe não confirmada nesta pesquisa.
