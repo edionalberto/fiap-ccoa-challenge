@@ -5,10 +5,11 @@ Pesquisa e proposta de gestão de recargas compartilhadas em condomínios
 **Autor:** Édion Alberto Torres · **RM:** 570560  
 **Curso:** Ciência da Computação on-line, FIAP  
 **Challenge:** GoodWe 2026, trilha EV ChargeOps  
-**Etapa:** Sprint 01 — pesquisa e documentação  
+**Etapa:** Sprint 02 — protótipo local (com pesquisa e proposta da Sprint 01)
+
 **Data da pesquisa:** 24 e 25 de setembro de 2026
 
-O CondoCarga propõe relacionar cada sessão de recarga ao apartamento responsável, calcular seu consumo e produzir um fechamento mensal conferível. A inteligência artificial apoiará a escolha de horários de menor demanda. Nesta sprint, apresento a pesquisa e as decisões que orientarão um protótipo na Sprint 02. O protótipo local da Sprint 2 já cobre cadastros demonstrativos, sessões, fila, fechamento mensal e sugestões horárias. A regressão é avaliada contra uma referência simples; neste conjunto sintético a referência pode ser selecionada se tiver menor erro. Não há integração GoodWe validada nem resultados com dados reais.
+Este repositório reúne a pesquisa e as decisões da Sprint 01 e o protótipo local desenvolvido na Sprint 02. O CondoCarga relaciona cada sessão ao apartamento responsável, calcula o consumo e produz um fechamento mensal conferível. O protótipo cobre cadastros demonstrativos, sessões, fila, fechamento mensal e sugestões horárias. A regressão é avaliada contra uma referência simples; neste conjunto sintético, a referência pode ser selecionada se tiver menor erro. Não há integração GoodWe validada nem resultados com dados reais.
 
 ## 1. Problema e recorte
 
@@ -341,3 +342,23 @@ O primeiro início carrega `data/demo.json` em `data/condocarga.sqlite3`. Para r
 Para rodar as verificações automatizadas: `.\.venv\Scripts\python.exe -m unittest discover -s tests -v`.
 
 A Sprint 2 não inclui comandos elétricos, cobrança bancária, publicação do serviço nem integração GoodWe real. A aplicação é local e acadêmica, não uma solução pronta para operação em condomínio.
+
+### Relação com o plano da Sprint 01
+
+As escolhas de Python/Streamlit, SQLite, JSON demonstrativo, RFID simulado, fila, fechamento conciliável e sugestões horárias seguem o recorte planejado. A demonstração usa dados sintéticos porque não há acesso/documentação confirmados para telemetria real do HCA G2; o plano já condicionava essa integração à confirmação dessas dependências. Pagamentos bancários e comandos elétricos permanecem fora do escopo do MVP.
+
+## 10. Evidências de funcionamento
+
+Capturas feitas com a aplicação executada localmente. Cadastros, sessões e valores mostrados são sintéticos e não representam telemetria, cobrança ou operação real.
+
+### Tela inicial
+
+![Tela inicial do CondoCarga com indicadores e acesso às jornadas](docs/evidencias/01-visao-inicial.png)
+
+### Jornada do morador
+
+![Jornada do morador com histórico da unidade e início de sessão simulada](docs/evidencias/02-jornada-morador.png)
+
+### Visão do síndico
+
+![Fechamento mensal demonstrativo por unidade, com memória de cálculo](docs/evidencias/03-visao-sindico.png)
