@@ -1,0 +1,8 @@
+schema: spec-driven
+context: |
+  Escreva os artefatos OpenSpec em português claro.
+  Projeto acadêmico individual, on-line, de gestão de recargas compartilhadas em condomínio.
+  Tecnologias propostas: Python, Streamlit e SQLite; validar dependências durante a etapa de base.
+  Dados GoodWe são uma integração futura condicionada a documentação e acesso confirmados.
+  Dados demonstrativos são sintéticos e devem ser identificados como tais.
+  As tarefas de implementação devem ser pequenas, ordenadas por dependência e indicar sua verificação.

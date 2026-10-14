@@ -8,7 +8,7 @@ Pesquisa e proposta de gestão de recargas compartilhadas em condomínios
 **Etapa:** Sprint 01 — pesquisa e documentação  
 **Data da pesquisa:** 24 e 25 de setembro de 2026
 
-O CondoCarga propõe relacionar cada sessão de recarga ao apartamento responsável, calcular seu consumo e produzir um fechamento mensal conferível. A inteligência artificial apoiará a escolha de horários de menor demanda. Nesta sprint, apresento a pesquisa e as decisões que orientarão um protótipo na Sprint 02. Ainda não há sistema funcional, integração GoodWe validada ou resultados de um modelo treinado.
+O CondoCarga propõe relacionar cada sessão de recarga ao apartamento responsável, calcular seu consumo e produzir um fechamento mensal conferível. A inteligência artificial apoiará a escolha de horários de menor demanda. Nesta sprint, apresento a pesquisa e as decisões que orientarão um protótipo na Sprint 02. O protótipo local da Sprint 2 já cobre cadastros demonstrativos, sessões, fila, fechamento mensal e sugestões horárias. A regressão é avaliada contra uma referência simples; neste conjunto sintético a referência pode ser selecionada se tiver menor erro. Não há integração GoodWe validada nem resultados com dados reais.
 
 ## 1. Problema e recorte
 
@@ -316,3 +316,28 @@ Consultas iniciais realizadas em 24/09/2026 e complementação em 25/09/2026 (fo
 24. [DOE/AFDC — Charging Electric Vehicles in Public](https://afdc.energy.gov/fuels/electricity-charging-public). Referência dos EUA, sem extrapolar proporções de uso ao Brasil.
 25. [DOE/AFDC — Workplace Charging for Electric Vehicles](https://afdc.energy.gov/fuels/electricity-charging-workplace). Referência dos EUA para contexto corporativo.
 26. [Open Charge Alliance — Open Charge Point Protocol](https://openchargealliance.org/protocols/open-charge-point-protocol/). Protocolo entre estações e sistemas de gestão; compatibilidade GoodWe não confirmada nesta pesquisa.
+
+
+## 9. Protótipo local da Sprint 02
+
+A implementação local demonstra o fluxo RFID simulado → usuário/unidade → sessão → consumo → relatório mensal. A visão do morador permite consultar sessões da unidade, entrar/cancelar pedidos de fila, iniciar e encerrar sessões simuladas e pedir sugestões entre dias/horas de preferência. A visão do síndico mostra sessões ativas, pedidos pendentes, tarifa para novas sessões e fechamento mensal exportável em CSV.
+
+Os dados iniciais são fictícios e determinísticos: 3 unidades, 4 moradores, 2 carregadores e 168 sessões encerradas com medições sintéticas por hora. Cada perfil horário está vinculado a sessão/carregador e soma à diferença das leituras totais. A cobrança usa somente as leituras inicial/final e a tarifa capturada na abertura, com arredondamento por sessão. O banco local é criado na primeira execução e não é versionado.
+
+A IA treina uma regressão linear com características cíclicas de hora e dia da semana, separa treino e teste em ordem temporal e compara MAE em kWh com média histórica por hora da semana. No cenário sintético atual, a regra seleciona automaticamente o método com menor MAE; a referência é mantida se superar a regressão. As recomendações são orientativas, sem reserva nem consulta de disponibilidade.
+
+### Executar no Windows
+
+Requer Python 3.10 ou posterior. Na pasta do repositório:
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m streamlit run app.py
+```
+
+O primeiro início carrega `data/demo.json` em `data/condocarga.sqlite3`. Para recriar exatamente o arquivo de demonstração versionado, execute `.\.venv\Scripts\python.exe scripts/generate_demo.py` antes de iniciar a aplicação. A interface não tem importador de arquivos nem integração com o HCA G2. RFID e perfis são demonstrativos, não autenticação de produção.
+
+Para rodar as verificações automatizadas: `.\.venv\Scripts\python.exe -m unittest discover -s tests -v`.
+
+A Sprint 2 não inclui comandos elétricos, cobrança bancária, publicação do serviço nem integração GoodWe real. A aplicação é local e acadêmica, não uma solução pronta para operação em condomínio.

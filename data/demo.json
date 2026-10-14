@@ -1,0 +1,4764 @@
+{
+  "schema_version": 1,
+  "description": "Dados sintéticos determinísticos; não representam equipamento GoodWe nem consumo real.",
+  "tariff_brl_per_kwh": "1.00",
+  "units": [
+    {
+      "id": "unit-101",
+      "number": "101"
+    },
+    {
+      "id": "unit-202",
+      "number": "202"
+    },
+    {
+      "id": "unit-303",
+      "number": "303"
+    }
+  ],
+  "users": [
+    {
+      "id": "user-ana",
+      "name": "Ana (demonstração)",
+      "unit_id": "unit-101",
+      "active": true
+    },
+    {
+      "id": "user-bruno",
+      "name": "Bruno (demonstração)",
+      "unit_id": "unit-101",
+      "active": true
+    },
+    {
+      "id": "user-caio",
+      "name": "Caio (demonstração)",
+      "unit_id": "unit-202",
+      "active": true
+    },
+    {
+      "id": "user-diana",
+      "name": "Diana (demonstração)",
+      "unit_id": "unit-303",
+      "active": true
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "vehicle-101-a",
+      "unit_id": "unit-101",
+      "label": "Veículo A — unidade 101"
+    },
+    {
+      "id": "vehicle-101-b",
+      "unit_id": "unit-101",
+      "label": "Veículo B — unidade 101"
+    },
+    {
+      "id": "vehicle-202-a",
+      "unit_id": "unit-202",
+      "label": "Veículo A — unidade 202"
+    },
+    {
+      "id": "vehicle-303-a",
+      "unit_id": "unit-303",
+      "label": "Veículo A — unidade 303"
+    }
+  ],
+  "rfid_cards": [
+    {
+      "token": "DEMO-RFID-101-A",
+      "user_id": "user-ana",
+      "active": true
+    },
+    {
+      "token": "DEMO-RFID-101-B",
+      "user_id": "user-bruno",
+      "active": true
+    },
+    {
+      "token": "DEMO-RFID-202-A",
+      "user_id": "user-caio",
+      "active": true
+    },
+    {
+      "token": "DEMO-RFID-303-A",
+      "user_id": "user-diana",
+      "active": true
+    },
+    {
+      "token": "DEMO-RFID-INACTIVE",
+      "user_id": "user-diana",
+      "active": false
+    }
+  ],
+  "chargers": [
+    {
+      "id": "hca-g2-01",
+      "name": "HCA G2 01 (simulado)",
+      "operational": true
+    },
+    {
+      "id": "hca-g2-02",
+      "name": "HCA G2 02 (simulado)",
+      "operational": true
+    }
+  ],
+  "sessions": [
+    {
+      "id": "DEMO-20260720-01",
+      "source_event_id": "DEMO-20260720-01",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-20T07:00:00-03:00",
+      "ended_at": "2026-07-20T09:00:00-03:00",
+      "meter_start_kwh": "100.000",
+      "meter_end_kwh": "110.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260720-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-20T07:00:00-03:00",
+          "interval_end": "2026-07-20T08:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260720-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-20T08:00:00-03:00",
+          "interval_end": "2026-07-20T09:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260720-02",
+      "source_event_id": "DEMO-20260720-02",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-07-20T12:00:00-03:00",
+      "ended_at": "2026-07-20T13:00:00-03:00",
+      "meter_start_kwh": "200.000",
+      "meter_end_kwh": "206.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260720-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-20T12:00:00-03:00",
+          "interval_end": "2026-07-20T13:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260720-03",
+      "source_event_id": "DEMO-20260720-03",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-20T16:00:00-03:00",
+      "ended_at": "2026-07-20T18:00:00-03:00",
+      "meter_start_kwh": "110.000",
+      "meter_end_kwh": "129.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260720-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-20T16:00:00-03:00",
+          "interval_end": "2026-07-20T17:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260720-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-20T17:00:00-03:00",
+          "interval_end": "2026-07-20T18:00:00-03:00",
+          "energy_kwh": "10.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260721-01",
+      "source_event_id": "DEMO-20260721-01",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-21T08:00:00-03:00",
+      "ended_at": "2026-07-21T10:00:00-03:00",
+      "meter_start_kwh": "129.000",
+      "meter_end_kwh": "139.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260721-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-21T08:00:00-03:00",
+          "interval_end": "2026-07-21T09:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260721-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-21T09:00:00-03:00",
+          "interval_end": "2026-07-21T10:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260721-02",
+      "source_event_id": "DEMO-20260721-02",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-07-21T10:00:00-03:00",
+      "ended_at": "2026-07-21T12:00:00-03:00",
+      "meter_start_kwh": "206.000",
+      "meter_end_kwh": "215.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260721-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-21T10:00:00-03:00",
+          "interval_end": "2026-07-21T11:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260721-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-21T11:00:00-03:00",
+          "interval_end": "2026-07-21T12:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260721-03",
+      "source_event_id": "DEMO-20260721-03",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-21T16:00:00-03:00",
+      "ended_at": "2026-07-21T17:00:00-03:00",
+      "meter_start_kwh": "139.000",
+      "meter_end_kwh": "149.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260721-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-21T16:00:00-03:00",
+          "interval_end": "2026-07-21T17:00:00-03:00",
+          "energy_kwh": "10.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260722-01",
+      "source_event_id": "DEMO-20260722-01",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-22T08:00:00-03:00",
+      "ended_at": "2026-07-22T10:00:00-03:00",
+      "meter_start_kwh": "149.000",
+      "meter_end_kwh": "161.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260722-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-22T08:00:00-03:00",
+          "interval_end": "2026-07-22T09:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260722-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-22T09:00:00-03:00",
+          "interval_end": "2026-07-22T10:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260722-02",
+      "source_event_id": "DEMO-20260722-02",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-07-22T10:00:00-03:00",
+      "ended_at": "2026-07-22T12:00:00-03:00",
+      "meter_start_kwh": "215.000",
+      "meter_end_kwh": "228.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260722-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-22T10:00:00-03:00",
+          "interval_end": "2026-07-22T11:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260722-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-22T11:00:00-03:00",
+          "interval_end": "2026-07-22T12:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260722-03",
+      "source_event_id": "DEMO-20260722-03",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-22T16:00:00-03:00",
+      "ended_at": "2026-07-22T17:00:00-03:00",
+      "meter_start_kwh": "161.000",
+      "meter_end_kwh": "168.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260722-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-22T16:00:00-03:00",
+          "interval_end": "2026-07-22T17:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260723-01",
+      "source_event_id": "DEMO-20260723-01",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-23T06:00:00-03:00",
+      "ended_at": "2026-07-23T07:00:00-03:00",
+      "meter_start_kwh": "168.000",
+      "meter_end_kwh": "173.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260723-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-23T06:00:00-03:00",
+          "interval_end": "2026-07-23T07:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260723-02",
+      "source_event_id": "DEMO-20260723-02",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-07-23T10:00:00-03:00",
+      "ended_at": "2026-07-23T12:00:00-03:00",
+      "meter_start_kwh": "228.000",
+      "meter_end_kwh": "237.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260723-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-23T10:00:00-03:00",
+          "interval_end": "2026-07-23T11:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260723-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-23T11:00:00-03:00",
+          "interval_end": "2026-07-23T12:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260723-03",
+      "source_event_id": "DEMO-20260723-03",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-23T17:00:00-03:00",
+      "ended_at": "2026-07-23T18:00:00-03:00",
+      "meter_start_kwh": "173.000",
+      "meter_end_kwh": "179.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260723-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-23T17:00:00-03:00",
+          "interval_end": "2026-07-23T18:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260724-01",
+      "source_event_id": "DEMO-20260724-01",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-24T06:00:00-03:00",
+      "ended_at": "2026-07-24T07:00:00-03:00",
+      "meter_start_kwh": "179.000",
+      "meter_end_kwh": "188.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260724-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-24T06:00:00-03:00",
+          "interval_end": "2026-07-24T07:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260724-02",
+      "source_event_id": "DEMO-20260724-02",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-07-24T11:00:00-03:00",
+      "ended_at": "2026-07-24T12:00:00-03:00",
+      "meter_start_kwh": "237.000",
+      "meter_end_kwh": "243.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260724-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-24T11:00:00-03:00",
+          "interval_end": "2026-07-24T12:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260724-03",
+      "source_event_id": "DEMO-20260724-03",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-24T16:00:00-03:00",
+      "ended_at": "2026-07-24T17:00:00-03:00",
+      "meter_start_kwh": "188.000",
+      "meter_end_kwh": "195.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260724-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-24T16:00:00-03:00",
+          "interval_end": "2026-07-24T17:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260725-01",
+      "source_event_id": "DEMO-20260725-01",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-25T06:00:00-03:00",
+      "ended_at": "2026-07-25T07:00:00-03:00",
+      "meter_start_kwh": "195.000",
+      "meter_end_kwh": "203.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260725-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-25T06:00:00-03:00",
+          "interval_end": "2026-07-25T07:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260725-02",
+      "source_event_id": "DEMO-20260725-02",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-07-25T12:00:00-03:00",
+      "ended_at": "2026-07-25T14:00:00-03:00",
+      "meter_start_kwh": "243.000",
+      "meter_end_kwh": "254.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260725-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-25T12:00:00-03:00",
+          "interval_end": "2026-07-25T13:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260725-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-25T13:00:00-03:00",
+          "interval_end": "2026-07-25T14:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260725-03",
+      "source_event_id": "DEMO-20260725-03",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-25T18:00:00-03:00",
+      "ended_at": "2026-07-25T20:00:00-03:00",
+      "meter_start_kwh": "203.000",
+      "meter_end_kwh": "215.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260725-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-25T18:00:00-03:00",
+          "interval_end": "2026-07-25T19:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260725-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-25T19:00:00-03:00",
+          "interval_end": "2026-07-25T20:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260726-01",
+      "source_event_id": "DEMO-20260726-01",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-26T07:00:00-03:00",
+      "ended_at": "2026-07-26T08:00:00-03:00",
+      "meter_start_kwh": "215.000",
+      "meter_end_kwh": "221.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260726-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-26T07:00:00-03:00",
+          "interval_end": "2026-07-26T08:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260726-02",
+      "source_event_id": "DEMO-20260726-02",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-07-26T12:00:00-03:00",
+      "ended_at": "2026-07-26T13:00:00-03:00",
+      "meter_start_kwh": "254.000",
+      "meter_end_kwh": "259.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260726-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-26T12:00:00-03:00",
+          "interval_end": "2026-07-26T13:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260726-03",
+      "source_event_id": "DEMO-20260726-03",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-26T17:00:00-03:00",
+      "ended_at": "2026-07-26T19:00:00-03:00",
+      "meter_start_kwh": "221.000",
+      "meter_end_kwh": "236.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260726-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-26T17:00:00-03:00",
+          "interval_end": "2026-07-26T18:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260726-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-26T18:00:00-03:00",
+          "interval_end": "2026-07-26T19:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260727-01",
+      "source_event_id": "DEMO-20260727-01",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-27T08:00:00-03:00",
+      "ended_at": "2026-07-27T09:00:00-03:00",
+      "meter_start_kwh": "236.000",
+      "meter_end_kwh": "241.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260727-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-27T08:00:00-03:00",
+          "interval_end": "2026-07-27T09:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260727-02",
+      "source_event_id": "DEMO-20260727-02",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-07-27T12:00:00-03:00",
+      "ended_at": "2026-07-27T13:00:00-03:00",
+      "meter_start_kwh": "259.000",
+      "meter_end_kwh": "266.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260727-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-27T12:00:00-03:00",
+          "interval_end": "2026-07-27T13:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260727-03",
+      "source_event_id": "DEMO-20260727-03",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-27T18:00:00-03:00",
+      "ended_at": "2026-07-27T20:00:00-03:00",
+      "meter_start_kwh": "241.000",
+      "meter_end_kwh": "256.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260727-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-27T18:00:00-03:00",
+          "interval_end": "2026-07-27T19:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260727-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-27T19:00:00-03:00",
+          "interval_end": "2026-07-27T20:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260728-01",
+      "source_event_id": "DEMO-20260728-01",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-28T08:00:00-03:00",
+      "ended_at": "2026-07-28T09:00:00-03:00",
+      "meter_start_kwh": "256.000",
+      "meter_end_kwh": "265.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260728-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-28T08:00:00-03:00",
+          "interval_end": "2026-07-28T09:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260728-02",
+      "source_event_id": "DEMO-20260728-02",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-07-28T12:00:00-03:00",
+      "ended_at": "2026-07-28T14:00:00-03:00",
+      "meter_start_kwh": "266.000",
+      "meter_end_kwh": "273.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260728-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-28T12:00:00-03:00",
+          "interval_end": "2026-07-28T13:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260728-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-28T13:00:00-03:00",
+          "interval_end": "2026-07-28T14:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260728-03",
+      "source_event_id": "DEMO-20260728-03",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-28T18:00:00-03:00",
+      "ended_at": "2026-07-28T20:00:00-03:00",
+      "meter_start_kwh": "265.000",
+      "meter_end_kwh": "276.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260728-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-28T18:00:00-03:00",
+          "interval_end": "2026-07-28T19:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260728-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-28T19:00:00-03:00",
+          "interval_end": "2026-07-28T20:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260729-01",
+      "source_event_id": "DEMO-20260729-01",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-29T08:00:00-03:00",
+      "ended_at": "2026-07-29T10:00:00-03:00",
+      "meter_start_kwh": "276.000",
+      "meter_end_kwh": "289.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260729-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-29T08:00:00-03:00",
+          "interval_end": "2026-07-29T09:00:00-03:00",
+          "energy_kwh": "10.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260729-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-29T09:00:00-03:00",
+          "interval_end": "2026-07-29T10:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260729-02",
+      "source_event_id": "DEMO-20260729-02",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-07-29T11:00:00-03:00",
+      "ended_at": "2026-07-29T12:00:00-03:00",
+      "meter_start_kwh": "273.000",
+      "meter_end_kwh": "279.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260729-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-29T11:00:00-03:00",
+          "interval_end": "2026-07-29T12:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260729-03",
+      "source_event_id": "DEMO-20260729-03",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-29T16:00:00-03:00",
+      "ended_at": "2026-07-29T17:00:00-03:00",
+      "meter_start_kwh": "289.000",
+      "meter_end_kwh": "299.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260729-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-29T16:00:00-03:00",
+          "interval_end": "2026-07-29T17:00:00-03:00",
+          "energy_kwh": "10.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260730-01",
+      "source_event_id": "DEMO-20260730-01",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-30T07:00:00-03:00",
+      "ended_at": "2026-07-30T08:00:00-03:00",
+      "meter_start_kwh": "299.000",
+      "meter_end_kwh": "308.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260730-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-30T07:00:00-03:00",
+          "interval_end": "2026-07-30T08:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260730-02",
+      "source_event_id": "DEMO-20260730-02",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-07-30T12:00:00-03:00",
+      "ended_at": "2026-07-30T13:00:00-03:00",
+      "meter_start_kwh": "279.000",
+      "meter_end_kwh": "284.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260730-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-30T12:00:00-03:00",
+          "interval_end": "2026-07-30T13:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260730-03",
+      "source_event_id": "DEMO-20260730-03",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-30T18:00:00-03:00",
+      "ended_at": "2026-07-30T19:00:00-03:00",
+      "meter_start_kwh": "308.000",
+      "meter_end_kwh": "314.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260730-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-30T18:00:00-03:00",
+          "interval_end": "2026-07-30T19:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260731-01",
+      "source_event_id": "DEMO-20260731-01",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-31T07:00:00-03:00",
+      "ended_at": "2026-07-31T08:00:00-03:00",
+      "meter_start_kwh": "314.000",
+      "meter_end_kwh": "323.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260731-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-31T07:00:00-03:00",
+          "interval_end": "2026-07-31T08:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260731-02",
+      "source_event_id": "DEMO-20260731-02",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-07-31T12:00:00-03:00",
+      "ended_at": "2026-07-31T14:00:00-03:00",
+      "meter_start_kwh": "284.000",
+      "meter_end_kwh": "295.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260731-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-31T12:00:00-03:00",
+          "interval_end": "2026-07-31T13:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260731-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-07-31T13:00:00-03:00",
+          "interval_end": "2026-07-31T14:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260731-03",
+      "source_event_id": "DEMO-20260731-03",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-07-31T18:00:00-03:00",
+      "ended_at": "2026-07-31T20:00:00-03:00",
+      "meter_start_kwh": "323.000",
+      "meter_end_kwh": "340.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260731-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-31T18:00:00-03:00",
+          "interval_end": "2026-07-31T19:00:00-03:00",
+          "energy_kwh": "10.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260731-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-07-31T19:00:00-03:00",
+          "interval_end": "2026-07-31T20:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260801-01",
+      "source_event_id": "DEMO-20260801-01",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-01T08:00:00-03:00",
+      "ended_at": "2026-08-01T09:00:00-03:00",
+      "meter_start_kwh": "340.000",
+      "meter_end_kwh": "346.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260801-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-01T08:00:00-03:00",
+          "interval_end": "2026-08-01T09:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260801-02",
+      "source_event_id": "DEMO-20260801-02",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-01T10:00:00-03:00",
+      "ended_at": "2026-08-01T11:00:00-03:00",
+      "meter_start_kwh": "295.000",
+      "meter_end_kwh": "298.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260801-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-01T10:00:00-03:00",
+          "interval_end": "2026-08-01T11:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260801-03",
+      "source_event_id": "DEMO-20260801-03",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-01T16:00:00-03:00",
+      "ended_at": "2026-08-01T18:00:00-03:00",
+      "meter_start_kwh": "346.000",
+      "meter_end_kwh": "357.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260801-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-01T16:00:00-03:00",
+          "interval_end": "2026-08-01T17:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260801-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-01T17:00:00-03:00",
+          "interval_end": "2026-08-01T18:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260802-01",
+      "source_event_id": "DEMO-20260802-01",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-02T08:00:00-03:00",
+      "ended_at": "2026-08-02T10:00:00-03:00",
+      "meter_start_kwh": "357.000",
+      "meter_end_kwh": "369.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260802-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-02T08:00:00-03:00",
+          "interval_end": "2026-08-02T09:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260802-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-02T09:00:00-03:00",
+          "interval_end": "2026-08-02T10:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260802-02",
+      "source_event_id": "DEMO-20260802-02",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-02T12:00:00-03:00",
+      "ended_at": "2026-08-02T14:00:00-03:00",
+      "meter_start_kwh": "298.000",
+      "meter_end_kwh": "307.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260802-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-02T12:00:00-03:00",
+          "interval_end": "2026-08-02T13:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260802-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-02T13:00:00-03:00",
+          "interval_end": "2026-08-02T14:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260802-03",
+      "source_event_id": "DEMO-20260802-03",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-02T17:00:00-03:00",
+      "ended_at": "2026-08-02T18:00:00-03:00",
+      "meter_start_kwh": "369.000",
+      "meter_end_kwh": "377.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260802-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-02T17:00:00-03:00",
+          "interval_end": "2026-08-02T18:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260803-01",
+      "source_event_id": "DEMO-20260803-01",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-03T07:00:00-03:00",
+      "ended_at": "2026-08-03T08:00:00-03:00",
+      "meter_start_kwh": "377.000",
+      "meter_end_kwh": "386.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260803-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-03T07:00:00-03:00",
+          "interval_end": "2026-08-03T08:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260803-02",
+      "source_event_id": "DEMO-20260803-02",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-03T10:00:00-03:00",
+      "ended_at": "2026-08-03T11:00:00-03:00",
+      "meter_start_kwh": "307.000",
+      "meter_end_kwh": "313.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260803-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-03T10:00:00-03:00",
+          "interval_end": "2026-08-03T11:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260803-03",
+      "source_event_id": "DEMO-20260803-03",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-03T18:00:00-03:00",
+      "ended_at": "2026-08-03T20:00:00-03:00",
+      "meter_start_kwh": "386.000",
+      "meter_end_kwh": "405.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260803-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-03T18:00:00-03:00",
+          "interval_end": "2026-08-03T19:00:00-03:00",
+          "energy_kwh": "10.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260803-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-03T19:00:00-03:00",
+          "interval_end": "2026-08-03T20:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260804-01",
+      "source_event_id": "DEMO-20260804-01",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-04T07:00:00-03:00",
+      "ended_at": "2026-08-04T09:00:00-03:00",
+      "meter_start_kwh": "405.000",
+      "meter_end_kwh": "417.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260804-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-04T07:00:00-03:00",
+          "interval_end": "2026-08-04T08:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260804-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-04T08:00:00-03:00",
+          "interval_end": "2026-08-04T09:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260804-02",
+      "source_event_id": "DEMO-20260804-02",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-04T10:00:00-03:00",
+      "ended_at": "2026-08-04T12:00:00-03:00",
+      "meter_start_kwh": "313.000",
+      "meter_end_kwh": "324.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260804-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-04T10:00:00-03:00",
+          "interval_end": "2026-08-04T11:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260804-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-04T11:00:00-03:00",
+          "interval_end": "2026-08-04T12:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260804-03",
+      "source_event_id": "DEMO-20260804-03",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-04T18:00:00-03:00",
+      "ended_at": "2026-08-04T19:00:00-03:00",
+      "meter_start_kwh": "417.000",
+      "meter_end_kwh": "424.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260804-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-04T18:00:00-03:00",
+          "interval_end": "2026-08-04T19:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260805-01",
+      "source_event_id": "DEMO-20260805-01",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-05T07:00:00-03:00",
+      "ended_at": "2026-08-05T08:00:00-03:00",
+      "meter_start_kwh": "424.000",
+      "meter_end_kwh": "430.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260805-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-05T07:00:00-03:00",
+          "interval_end": "2026-08-05T08:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260805-02",
+      "source_event_id": "DEMO-20260805-02",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-05T11:00:00-03:00",
+      "ended_at": "2026-08-05T13:00:00-03:00",
+      "meter_start_kwh": "324.000",
+      "meter_end_kwh": "334.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260805-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-05T11:00:00-03:00",
+          "interval_end": "2026-08-05T12:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260805-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-05T12:00:00-03:00",
+          "interval_end": "2026-08-05T13:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260805-03",
+      "source_event_id": "DEMO-20260805-03",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-05T16:00:00-03:00",
+      "ended_at": "2026-08-05T17:00:00-03:00",
+      "meter_start_kwh": "430.000",
+      "meter_end_kwh": "439.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260805-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-05T16:00:00-03:00",
+          "interval_end": "2026-08-05T17:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260806-01",
+      "source_event_id": "DEMO-20260806-01",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-06T06:00:00-03:00",
+      "ended_at": "2026-08-06T07:00:00-03:00",
+      "meter_start_kwh": "439.000",
+      "meter_end_kwh": "448.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260806-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-06T06:00:00-03:00",
+          "interval_end": "2026-08-06T07:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260806-02",
+      "source_event_id": "DEMO-20260806-02",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-06T11:00:00-03:00",
+      "ended_at": "2026-08-06T12:00:00-03:00",
+      "meter_start_kwh": "334.000",
+      "meter_end_kwh": "338.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260806-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-06T11:00:00-03:00",
+          "interval_end": "2026-08-06T12:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260806-03",
+      "source_event_id": "DEMO-20260806-03",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-06T18:00:00-03:00",
+      "ended_at": "2026-08-06T20:00:00-03:00",
+      "meter_start_kwh": "448.000",
+      "meter_end_kwh": "461.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260806-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-06T18:00:00-03:00",
+          "interval_end": "2026-08-06T19:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260806-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-06T19:00:00-03:00",
+          "interval_end": "2026-08-06T20:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260807-01",
+      "source_event_id": "DEMO-20260807-01",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-07T06:00:00-03:00",
+      "ended_at": "2026-08-07T08:00:00-03:00",
+      "meter_start_kwh": "461.000",
+      "meter_end_kwh": "476.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260807-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-07T06:00:00-03:00",
+          "interval_end": "2026-08-07T07:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260807-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-07T07:00:00-03:00",
+          "interval_end": "2026-08-07T08:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260807-02",
+      "source_event_id": "DEMO-20260807-02",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-07T10:00:00-03:00",
+      "ended_at": "2026-08-07T12:00:00-03:00",
+      "meter_start_kwh": "338.000",
+      "meter_end_kwh": "345.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260807-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-07T10:00:00-03:00",
+          "interval_end": "2026-08-07T11:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260807-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-07T11:00:00-03:00",
+          "interval_end": "2026-08-07T12:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260807-03",
+      "source_event_id": "DEMO-20260807-03",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-07T16:00:00-03:00",
+      "ended_at": "2026-08-07T17:00:00-03:00",
+      "meter_start_kwh": "476.000",
+      "meter_end_kwh": "486.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260807-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-07T16:00:00-03:00",
+          "interval_end": "2026-08-07T17:00:00-03:00",
+          "energy_kwh": "10.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260808-01",
+      "source_event_id": "DEMO-20260808-01",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-08T08:00:00-03:00",
+      "ended_at": "2026-08-08T09:00:00-03:00",
+      "meter_start_kwh": "486.000",
+      "meter_end_kwh": "494.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260808-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-08T08:00:00-03:00",
+          "interval_end": "2026-08-08T09:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260808-02",
+      "source_event_id": "DEMO-20260808-02",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-08T10:00:00-03:00",
+      "ended_at": "2026-08-08T11:00:00-03:00",
+      "meter_start_kwh": "345.000",
+      "meter_end_kwh": "348.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260808-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-08T10:00:00-03:00",
+          "interval_end": "2026-08-08T11:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260808-03",
+      "source_event_id": "DEMO-20260808-03",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-08T16:00:00-03:00",
+      "ended_at": "2026-08-08T17:00:00-03:00",
+      "meter_start_kwh": "494.000",
+      "meter_end_kwh": "501.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260808-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-08T16:00:00-03:00",
+          "interval_end": "2026-08-08T17:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260809-01",
+      "source_event_id": "DEMO-20260809-01",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-09T06:00:00-03:00",
+      "ended_at": "2026-08-09T08:00:00-03:00",
+      "meter_start_kwh": "501.000",
+      "meter_end_kwh": "513.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260809-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-09T06:00:00-03:00",
+          "interval_end": "2026-08-09T07:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260809-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-09T07:00:00-03:00",
+          "interval_end": "2026-08-09T08:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260809-02",
+      "source_event_id": "DEMO-20260809-02",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-09T11:00:00-03:00",
+      "ended_at": "2026-08-09T13:00:00-03:00",
+      "meter_start_kwh": "348.000",
+      "meter_end_kwh": "356.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260809-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-09T11:00:00-03:00",
+          "interval_end": "2026-08-09T12:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260809-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-09T12:00:00-03:00",
+          "interval_end": "2026-08-09T13:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260809-03",
+      "source_event_id": "DEMO-20260809-03",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-09T17:00:00-03:00",
+      "ended_at": "2026-08-09T19:00:00-03:00",
+      "meter_start_kwh": "513.000",
+      "meter_end_kwh": "528.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260809-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-09T17:00:00-03:00",
+          "interval_end": "2026-08-09T18:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260809-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-09T18:00:00-03:00",
+          "interval_end": "2026-08-09T19:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260810-01",
+      "source_event_id": "DEMO-20260810-01",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-10T06:00:00-03:00",
+      "ended_at": "2026-08-10T07:00:00-03:00",
+      "meter_start_kwh": "528.000",
+      "meter_end_kwh": "535.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260810-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-10T06:00:00-03:00",
+          "interval_end": "2026-08-10T07:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260810-02",
+      "source_event_id": "DEMO-20260810-02",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-10T12:00:00-03:00",
+      "ended_at": "2026-08-10T13:00:00-03:00",
+      "meter_start_kwh": "356.000",
+      "meter_end_kwh": "362.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260810-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-10T12:00:00-03:00",
+          "interval_end": "2026-08-10T13:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260810-03",
+      "source_event_id": "DEMO-20260810-03",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-10T18:00:00-03:00",
+      "ended_at": "2026-08-10T19:00:00-03:00",
+      "meter_start_kwh": "535.000",
+      "meter_end_kwh": "542.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260810-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-10T18:00:00-03:00",
+          "interval_end": "2026-08-10T19:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260811-01",
+      "source_event_id": "DEMO-20260811-01",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-11T07:00:00-03:00",
+      "ended_at": "2026-08-11T09:00:00-03:00",
+      "meter_start_kwh": "542.000",
+      "meter_end_kwh": "557.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260811-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-11T07:00:00-03:00",
+          "interval_end": "2026-08-11T08:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260811-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-11T08:00:00-03:00",
+          "interval_end": "2026-08-11T09:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260811-02",
+      "source_event_id": "DEMO-20260811-02",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-11T11:00:00-03:00",
+      "ended_at": "2026-08-11T13:00:00-03:00",
+      "meter_start_kwh": "362.000",
+      "meter_end_kwh": "375.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260811-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-11T11:00:00-03:00",
+          "interval_end": "2026-08-11T12:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260811-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-11T12:00:00-03:00",
+          "interval_end": "2026-08-11T13:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260811-03",
+      "source_event_id": "DEMO-20260811-03",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-11T18:00:00-03:00",
+      "ended_at": "2026-08-11T19:00:00-03:00",
+      "meter_start_kwh": "557.000",
+      "meter_end_kwh": "564.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260811-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-11T18:00:00-03:00",
+          "interval_end": "2026-08-11T19:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260812-01",
+      "source_event_id": "DEMO-20260812-01",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-12T08:00:00-03:00",
+      "ended_at": "2026-08-12T10:00:00-03:00",
+      "meter_start_kwh": "564.000",
+      "meter_end_kwh": "578.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260812-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-12T08:00:00-03:00",
+          "interval_end": "2026-08-12T09:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260812-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-12T09:00:00-03:00",
+          "interval_end": "2026-08-12T10:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260812-02",
+      "source_event_id": "DEMO-20260812-02",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-12T12:00:00-03:00",
+      "ended_at": "2026-08-12T13:00:00-03:00",
+      "meter_start_kwh": "375.000",
+      "meter_end_kwh": "380.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260812-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-12T12:00:00-03:00",
+          "interval_end": "2026-08-12T13:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260812-03",
+      "source_event_id": "DEMO-20260812-03",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-12T16:00:00-03:00",
+      "ended_at": "2026-08-12T18:00:00-03:00",
+      "meter_start_kwh": "578.000",
+      "meter_end_kwh": "592.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260812-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-12T16:00:00-03:00",
+          "interval_end": "2026-08-12T17:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260812-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-12T17:00:00-03:00",
+          "interval_end": "2026-08-12T18:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260813-01",
+      "source_event_id": "DEMO-20260813-01",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-13T08:00:00-03:00",
+      "ended_at": "2026-08-13T09:00:00-03:00",
+      "meter_start_kwh": "592.000",
+      "meter_end_kwh": "601.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260813-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-13T08:00:00-03:00",
+          "interval_end": "2026-08-13T09:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260813-02",
+      "source_event_id": "DEMO-20260813-02",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-13T11:00:00-03:00",
+      "ended_at": "2026-08-13T13:00:00-03:00",
+      "meter_start_kwh": "380.000",
+      "meter_end_kwh": "389.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260813-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-13T11:00:00-03:00",
+          "interval_end": "2026-08-13T12:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260813-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-13T12:00:00-03:00",
+          "interval_end": "2026-08-13T13:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260813-03",
+      "source_event_id": "DEMO-20260813-03",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-13T18:00:00-03:00",
+      "ended_at": "2026-08-13T19:00:00-03:00",
+      "meter_start_kwh": "601.000",
+      "meter_end_kwh": "607.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260813-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-13T18:00:00-03:00",
+          "interval_end": "2026-08-13T19:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260814-01",
+      "source_event_id": "DEMO-20260814-01",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-14T07:00:00-03:00",
+      "ended_at": "2026-08-14T08:00:00-03:00",
+      "meter_start_kwh": "607.000",
+      "meter_end_kwh": "617.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260814-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-14T07:00:00-03:00",
+          "interval_end": "2026-08-14T08:00:00-03:00",
+          "energy_kwh": "10.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260814-02",
+      "source_event_id": "DEMO-20260814-02",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-14T10:00:00-03:00",
+      "ended_at": "2026-08-14T11:00:00-03:00",
+      "meter_start_kwh": "389.000",
+      "meter_end_kwh": "393.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260814-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-14T10:00:00-03:00",
+          "interval_end": "2026-08-14T11:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260814-03",
+      "source_event_id": "DEMO-20260814-03",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-14T16:00:00-03:00",
+      "ended_at": "2026-08-14T18:00:00-03:00",
+      "meter_start_kwh": "617.000",
+      "meter_end_kwh": "635.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260814-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-14T16:00:00-03:00",
+          "interval_end": "2026-08-14T17:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260814-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-14T17:00:00-03:00",
+          "interval_end": "2026-08-14T18:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260815-01",
+      "source_event_id": "DEMO-20260815-01",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-15T07:00:00-03:00",
+      "ended_at": "2026-08-15T09:00:00-03:00",
+      "meter_start_kwh": "635.000",
+      "meter_end_kwh": "650.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260815-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-15T07:00:00-03:00",
+          "interval_end": "2026-08-15T08:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260815-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-15T08:00:00-03:00",
+          "interval_end": "2026-08-15T09:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260815-02",
+      "source_event_id": "DEMO-20260815-02",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-15T10:00:00-03:00",
+      "ended_at": "2026-08-15T11:00:00-03:00",
+      "meter_start_kwh": "393.000",
+      "meter_end_kwh": "399.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260815-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-15T10:00:00-03:00",
+          "interval_end": "2026-08-15T11:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260815-03",
+      "source_event_id": "DEMO-20260815-03",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-15T16:00:00-03:00",
+      "ended_at": "2026-08-15T17:00:00-03:00",
+      "meter_start_kwh": "650.000",
+      "meter_end_kwh": "655.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260815-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-15T16:00:00-03:00",
+          "interval_end": "2026-08-15T17:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260816-01",
+      "source_event_id": "DEMO-20260816-01",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-16T07:00:00-03:00",
+      "ended_at": "2026-08-16T09:00:00-03:00",
+      "meter_start_kwh": "655.000",
+      "meter_end_kwh": "667.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260816-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-16T07:00:00-03:00",
+          "interval_end": "2026-08-16T08:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260816-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-16T08:00:00-03:00",
+          "interval_end": "2026-08-16T09:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260816-02",
+      "source_event_id": "DEMO-20260816-02",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-16T10:00:00-03:00",
+      "ended_at": "2026-08-16T12:00:00-03:00",
+      "meter_start_kwh": "399.000",
+      "meter_end_kwh": "407.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260816-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-16T10:00:00-03:00",
+          "interval_end": "2026-08-16T11:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260816-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-16T11:00:00-03:00",
+          "interval_end": "2026-08-16T12:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260816-03",
+      "source_event_id": "DEMO-20260816-03",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-16T17:00:00-03:00",
+      "ended_at": "2026-08-16T19:00:00-03:00",
+      "meter_start_kwh": "667.000",
+      "meter_end_kwh": "680.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260816-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-16T17:00:00-03:00",
+          "interval_end": "2026-08-16T18:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260816-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-16T18:00:00-03:00",
+          "interval_end": "2026-08-16T19:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260817-01",
+      "source_event_id": "DEMO-20260817-01",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-17T07:00:00-03:00",
+      "ended_at": "2026-08-17T09:00:00-03:00",
+      "meter_start_kwh": "680.000",
+      "meter_end_kwh": "695.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260817-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-17T07:00:00-03:00",
+          "interval_end": "2026-08-17T08:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260817-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-17T08:00:00-03:00",
+          "interval_end": "2026-08-17T09:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260817-02",
+      "source_event_id": "DEMO-20260817-02",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-17T10:00:00-03:00",
+      "ended_at": "2026-08-17T12:00:00-03:00",
+      "meter_start_kwh": "407.000",
+      "meter_end_kwh": "415.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260817-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-17T10:00:00-03:00",
+          "interval_end": "2026-08-17T11:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260817-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-17T11:00:00-03:00",
+          "interval_end": "2026-08-17T12:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260817-03",
+      "source_event_id": "DEMO-20260817-03",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-17T16:00:00-03:00",
+      "ended_at": "2026-08-17T18:00:00-03:00",
+      "meter_start_kwh": "695.000",
+      "meter_end_kwh": "708.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260817-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-17T16:00:00-03:00",
+          "interval_end": "2026-08-17T17:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260817-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-17T17:00:00-03:00",
+          "interval_end": "2026-08-17T18:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260818-01",
+      "source_event_id": "DEMO-20260818-01",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-18T08:00:00-03:00",
+      "ended_at": "2026-08-18T10:00:00-03:00",
+      "meter_start_kwh": "708.000",
+      "meter_end_kwh": "720.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260818-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-18T08:00:00-03:00",
+          "interval_end": "2026-08-18T09:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260818-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-18T09:00:00-03:00",
+          "interval_end": "2026-08-18T10:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260818-02",
+      "source_event_id": "DEMO-20260818-02",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-18T11:00:00-03:00",
+      "ended_at": "2026-08-18T13:00:00-03:00",
+      "meter_start_kwh": "415.000",
+      "meter_end_kwh": "427.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260818-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-18T11:00:00-03:00",
+          "interval_end": "2026-08-18T12:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260818-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-18T12:00:00-03:00",
+          "interval_end": "2026-08-18T13:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260818-03",
+      "source_event_id": "DEMO-20260818-03",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-18T16:00:00-03:00",
+      "ended_at": "2026-08-18T17:00:00-03:00",
+      "meter_start_kwh": "720.000",
+      "meter_end_kwh": "730.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260818-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-18T16:00:00-03:00",
+          "interval_end": "2026-08-18T17:00:00-03:00",
+          "energy_kwh": "10.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260819-01",
+      "source_event_id": "DEMO-20260819-01",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-19T08:00:00-03:00",
+      "ended_at": "2026-08-19T10:00:00-03:00",
+      "meter_start_kwh": "730.000",
+      "meter_end_kwh": "743.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260819-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-19T08:00:00-03:00",
+          "interval_end": "2026-08-19T09:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260819-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-19T09:00:00-03:00",
+          "interval_end": "2026-08-19T10:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260819-02",
+      "source_event_id": "DEMO-20260819-02",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-19T12:00:00-03:00",
+      "ended_at": "2026-08-19T13:00:00-03:00",
+      "meter_start_kwh": "427.000",
+      "meter_end_kwh": "431.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260819-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-19T12:00:00-03:00",
+          "interval_end": "2026-08-19T13:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260819-03",
+      "source_event_id": "DEMO-20260819-03",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-19T18:00:00-03:00",
+      "ended_at": "2026-08-19T20:00:00-03:00",
+      "meter_start_kwh": "743.000",
+      "meter_end_kwh": "761.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260819-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-19T18:00:00-03:00",
+          "interval_end": "2026-08-19T19:00:00-03:00",
+          "energy_kwh": "10.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260819-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-19T19:00:00-03:00",
+          "interval_end": "2026-08-19T20:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260820-01",
+      "source_event_id": "DEMO-20260820-01",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-20T08:00:00-03:00",
+      "ended_at": "2026-08-20T10:00:00-03:00",
+      "meter_start_kwh": "761.000",
+      "meter_end_kwh": "773.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260820-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-20T08:00:00-03:00",
+          "interval_end": "2026-08-20T09:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260820-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-20T09:00:00-03:00",
+          "interval_end": "2026-08-20T10:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260820-02",
+      "source_event_id": "DEMO-20260820-02",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-20T10:00:00-03:00",
+      "ended_at": "2026-08-20T11:00:00-03:00",
+      "meter_start_kwh": "431.000",
+      "meter_end_kwh": "438.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260820-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-20T10:00:00-03:00",
+          "interval_end": "2026-08-20T11:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260820-03",
+      "source_event_id": "DEMO-20260820-03",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-20T17:00:00-03:00",
+      "ended_at": "2026-08-20T18:00:00-03:00",
+      "meter_start_kwh": "773.000",
+      "meter_end_kwh": "780.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260820-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-20T17:00:00-03:00",
+          "interval_end": "2026-08-20T18:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260821-01",
+      "source_event_id": "DEMO-20260821-01",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-21T07:00:00-03:00",
+      "ended_at": "2026-08-21T08:00:00-03:00",
+      "meter_start_kwh": "780.000",
+      "meter_end_kwh": "786.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260821-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-21T07:00:00-03:00",
+          "interval_end": "2026-08-21T08:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260821-02",
+      "source_event_id": "DEMO-20260821-02",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-21T12:00:00-03:00",
+      "ended_at": "2026-08-21T13:00:00-03:00",
+      "meter_start_kwh": "438.000",
+      "meter_end_kwh": "444.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260821-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-21T12:00:00-03:00",
+          "interval_end": "2026-08-21T13:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260821-03",
+      "source_event_id": "DEMO-20260821-03",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-21T18:00:00-03:00",
+      "ended_at": "2026-08-21T19:00:00-03:00",
+      "meter_start_kwh": "786.000",
+      "meter_end_kwh": "793.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260821-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-21T18:00:00-03:00",
+          "interval_end": "2026-08-21T19:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260822-01",
+      "source_event_id": "DEMO-20260822-01",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-22T06:00:00-03:00",
+      "ended_at": "2026-08-22T07:00:00-03:00",
+      "meter_start_kwh": "793.000",
+      "meter_end_kwh": "799.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260822-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-22T06:00:00-03:00",
+          "interval_end": "2026-08-22T07:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260822-02",
+      "source_event_id": "DEMO-20260822-02",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-22T12:00:00-03:00",
+      "ended_at": "2026-08-22T14:00:00-03:00",
+      "meter_start_kwh": "444.000",
+      "meter_end_kwh": "453.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260822-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-22T12:00:00-03:00",
+          "interval_end": "2026-08-22T13:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260822-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-22T13:00:00-03:00",
+          "interval_end": "2026-08-22T14:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260822-03",
+      "source_event_id": "DEMO-20260822-03",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-22T18:00:00-03:00",
+      "ended_at": "2026-08-22T19:00:00-03:00",
+      "meter_start_kwh": "799.000",
+      "meter_end_kwh": "806.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260822-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-22T18:00:00-03:00",
+          "interval_end": "2026-08-22T19:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260823-01",
+      "source_event_id": "DEMO-20260823-01",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-23T08:00:00-03:00",
+      "ended_at": "2026-08-23T10:00:00-03:00",
+      "meter_start_kwh": "806.000",
+      "meter_end_kwh": "817.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260823-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-23T08:00:00-03:00",
+          "interval_end": "2026-08-23T09:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260823-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-23T09:00:00-03:00",
+          "interval_end": "2026-08-23T10:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260823-02",
+      "source_event_id": "DEMO-20260823-02",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-23T11:00:00-03:00",
+      "ended_at": "2026-08-23T12:00:00-03:00",
+      "meter_start_kwh": "453.000",
+      "meter_end_kwh": "456.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260823-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-23T11:00:00-03:00",
+          "interval_end": "2026-08-23T12:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260823-03",
+      "source_event_id": "DEMO-20260823-03",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-23T17:00:00-03:00",
+      "ended_at": "2026-08-23T18:00:00-03:00",
+      "meter_start_kwh": "817.000",
+      "meter_end_kwh": "822.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260823-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-23T17:00:00-03:00",
+          "interval_end": "2026-08-23T18:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260824-01",
+      "source_event_id": "DEMO-20260824-01",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-24T08:00:00-03:00",
+      "ended_at": "2026-08-24T09:00:00-03:00",
+      "meter_start_kwh": "822.000",
+      "meter_end_kwh": "828.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260824-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-24T08:00:00-03:00",
+          "interval_end": "2026-08-24T09:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260824-02",
+      "source_event_id": "DEMO-20260824-02",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-24T12:00:00-03:00",
+      "ended_at": "2026-08-24T13:00:00-03:00",
+      "meter_start_kwh": "456.000",
+      "meter_end_kwh": "460.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260824-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-24T12:00:00-03:00",
+          "interval_end": "2026-08-24T13:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260824-03",
+      "source_event_id": "DEMO-20260824-03",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-24T17:00:00-03:00",
+      "ended_at": "2026-08-24T18:00:00-03:00",
+      "meter_start_kwh": "828.000",
+      "meter_end_kwh": "834.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260824-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-24T17:00:00-03:00",
+          "interval_end": "2026-08-24T18:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260825-01",
+      "source_event_id": "DEMO-20260825-01",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-25T06:00:00-03:00",
+      "ended_at": "2026-08-25T08:00:00-03:00",
+      "meter_start_kwh": "834.000",
+      "meter_end_kwh": "850.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260825-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-25T06:00:00-03:00",
+          "interval_end": "2026-08-25T07:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260825-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-25T07:00:00-03:00",
+          "interval_end": "2026-08-25T08:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260825-02",
+      "source_event_id": "DEMO-20260825-02",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-25T11:00:00-03:00",
+      "ended_at": "2026-08-25T13:00:00-03:00",
+      "meter_start_kwh": "460.000",
+      "meter_end_kwh": "473.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260825-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-25T11:00:00-03:00",
+          "interval_end": "2026-08-25T12:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260825-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-25T12:00:00-03:00",
+          "interval_end": "2026-08-25T13:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260825-03",
+      "source_event_id": "DEMO-20260825-03",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-25T16:00:00-03:00",
+      "ended_at": "2026-08-25T18:00:00-03:00",
+      "meter_start_kwh": "850.000",
+      "meter_end_kwh": "864.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260825-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-25T16:00:00-03:00",
+          "interval_end": "2026-08-25T17:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260825-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-25T17:00:00-03:00",
+          "interval_end": "2026-08-25T18:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260826-01",
+      "source_event_id": "DEMO-20260826-01",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-26T08:00:00-03:00",
+      "ended_at": "2026-08-26T10:00:00-03:00",
+      "meter_start_kwh": "864.000",
+      "meter_end_kwh": "874.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260826-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-26T08:00:00-03:00",
+          "interval_end": "2026-08-26T09:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260826-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-26T09:00:00-03:00",
+          "interval_end": "2026-08-26T10:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260826-02",
+      "source_event_id": "DEMO-20260826-02",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-26T11:00:00-03:00",
+      "ended_at": "2026-08-26T12:00:00-03:00",
+      "meter_start_kwh": "473.000",
+      "meter_end_kwh": "479.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260826-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-26T11:00:00-03:00",
+          "interval_end": "2026-08-26T12:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260826-03",
+      "source_event_id": "DEMO-20260826-03",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-26T17:00:00-03:00",
+      "ended_at": "2026-08-26T19:00:00-03:00",
+      "meter_start_kwh": "874.000",
+      "meter_end_kwh": "888.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260826-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-26T17:00:00-03:00",
+          "interval_end": "2026-08-26T18:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260826-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-26T18:00:00-03:00",
+          "interval_end": "2026-08-26T19:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260827-01",
+      "source_event_id": "DEMO-20260827-01",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-27T07:00:00-03:00",
+      "ended_at": "2026-08-27T08:00:00-03:00",
+      "meter_start_kwh": "888.000",
+      "meter_end_kwh": "895.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260827-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-27T07:00:00-03:00",
+          "interval_end": "2026-08-27T08:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260827-02",
+      "source_event_id": "DEMO-20260827-02",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-27T11:00:00-03:00",
+      "ended_at": "2026-08-27T13:00:00-03:00",
+      "meter_start_kwh": "479.000",
+      "meter_end_kwh": "487.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260827-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-27T11:00:00-03:00",
+          "interval_end": "2026-08-27T12:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260827-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-27T12:00:00-03:00",
+          "interval_end": "2026-08-27T13:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260827-03",
+      "source_event_id": "DEMO-20260827-03",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-27T18:00:00-03:00",
+      "ended_at": "2026-08-27T19:00:00-03:00",
+      "meter_start_kwh": "895.000",
+      "meter_end_kwh": "903.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260827-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-27T18:00:00-03:00",
+          "interval_end": "2026-08-27T19:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260828-01",
+      "source_event_id": "DEMO-20260828-01",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-28T08:00:00-03:00",
+      "ended_at": "2026-08-28T09:00:00-03:00",
+      "meter_start_kwh": "903.000",
+      "meter_end_kwh": "909.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260828-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-28T08:00:00-03:00",
+          "interval_end": "2026-08-28T09:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260828-02",
+      "source_event_id": "DEMO-20260828-02",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-28T12:00:00-03:00",
+      "ended_at": "2026-08-28T14:00:00-03:00",
+      "meter_start_kwh": "487.000",
+      "meter_end_kwh": "499.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260828-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-28T12:00:00-03:00",
+          "interval_end": "2026-08-28T13:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260828-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-28T13:00:00-03:00",
+          "interval_end": "2026-08-28T14:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260828-03",
+      "source_event_id": "DEMO-20260828-03",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-28T16:00:00-03:00",
+      "ended_at": "2026-08-28T18:00:00-03:00",
+      "meter_start_kwh": "909.000",
+      "meter_end_kwh": "921.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260828-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-28T16:00:00-03:00",
+          "interval_end": "2026-08-28T17:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260828-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-28T17:00:00-03:00",
+          "interval_end": "2026-08-28T18:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260829-01",
+      "source_event_id": "DEMO-20260829-01",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-29T08:00:00-03:00",
+      "ended_at": "2026-08-29T09:00:00-03:00",
+      "meter_start_kwh": "921.000",
+      "meter_end_kwh": "928.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260829-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-29T08:00:00-03:00",
+          "interval_end": "2026-08-29T09:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260829-02",
+      "source_event_id": "DEMO-20260829-02",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-29T11:00:00-03:00",
+      "ended_at": "2026-08-29T13:00:00-03:00",
+      "meter_start_kwh": "499.000",
+      "meter_end_kwh": "508.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260829-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-29T11:00:00-03:00",
+          "interval_end": "2026-08-29T12:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260829-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-29T12:00:00-03:00",
+          "interval_end": "2026-08-29T13:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260829-03",
+      "source_event_id": "DEMO-20260829-03",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-29T16:00:00-03:00",
+      "ended_at": "2026-08-29T18:00:00-03:00",
+      "meter_start_kwh": "928.000",
+      "meter_end_kwh": "942.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260829-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-29T16:00:00-03:00",
+          "interval_end": "2026-08-29T17:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260829-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-29T17:00:00-03:00",
+          "interval_end": "2026-08-29T18:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260830-01",
+      "source_event_id": "DEMO-20260830-01",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-30T06:00:00-03:00",
+      "ended_at": "2026-08-30T07:00:00-03:00",
+      "meter_start_kwh": "942.000",
+      "meter_end_kwh": "950.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260830-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-30T06:00:00-03:00",
+          "interval_end": "2026-08-30T07:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260830-02",
+      "source_event_id": "DEMO-20260830-02",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-30T12:00:00-03:00",
+      "ended_at": "2026-08-30T13:00:00-03:00",
+      "meter_start_kwh": "508.000",
+      "meter_end_kwh": "514.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260830-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-30T12:00:00-03:00",
+          "interval_end": "2026-08-30T13:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260830-03",
+      "source_event_id": "DEMO-20260830-03",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-30T17:00:00-03:00",
+      "ended_at": "2026-08-30T18:00:00-03:00",
+      "meter_start_kwh": "950.000",
+      "meter_end_kwh": "957.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260830-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-30T17:00:00-03:00",
+          "interval_end": "2026-08-30T18:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260831-01",
+      "source_event_id": "DEMO-20260831-01",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-31T07:00:00-03:00",
+      "ended_at": "2026-08-31T08:00:00-03:00",
+      "meter_start_kwh": "957.000",
+      "meter_end_kwh": "962.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260831-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-31T07:00:00-03:00",
+          "interval_end": "2026-08-31T08:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260831-02",
+      "source_event_id": "DEMO-20260831-02",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-08-31T12:00:00-03:00",
+      "ended_at": "2026-08-31T13:00:00-03:00",
+      "meter_start_kwh": "514.000",
+      "meter_end_kwh": "518.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260831-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-08-31T12:00:00-03:00",
+          "interval_end": "2026-08-31T13:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260831-03",
+      "source_event_id": "DEMO-20260831-03",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-08-31T17:00:00-03:00",
+      "ended_at": "2026-08-31T18:00:00-03:00",
+      "meter_start_kwh": "962.000",
+      "meter_end_kwh": "969.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260831-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-08-31T17:00:00-03:00",
+          "interval_end": "2026-08-31T18:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260901-01",
+      "source_event_id": "DEMO-20260901-01",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-01T06:00:00-03:00",
+      "ended_at": "2026-09-01T08:00:00-03:00",
+      "meter_start_kwh": "969.000",
+      "meter_end_kwh": "982.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260901-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-01T06:00:00-03:00",
+          "interval_end": "2026-09-01T07:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260901-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-01T07:00:00-03:00",
+          "interval_end": "2026-09-01T08:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260901-02",
+      "source_event_id": "DEMO-20260901-02",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-09-01T12:00:00-03:00",
+      "ended_at": "2026-09-01T14:00:00-03:00",
+      "meter_start_kwh": "518.000",
+      "meter_end_kwh": "531.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260901-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-01T12:00:00-03:00",
+          "interval_end": "2026-09-01T13:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260901-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-01T13:00:00-03:00",
+          "interval_end": "2026-09-01T14:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260901-03",
+      "source_event_id": "DEMO-20260901-03",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-01T17:00:00-03:00",
+      "ended_at": "2026-09-01T18:00:00-03:00",
+      "meter_start_kwh": "982.000",
+      "meter_end_kwh": "992.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260901-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-01T17:00:00-03:00",
+          "interval_end": "2026-09-01T18:00:00-03:00",
+          "energy_kwh": "10.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260902-01",
+      "source_event_id": "DEMO-20260902-01",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-02T08:00:00-03:00",
+      "ended_at": "2026-09-02T09:00:00-03:00",
+      "meter_start_kwh": "992.000",
+      "meter_end_kwh": "1000.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260902-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-02T08:00:00-03:00",
+          "interval_end": "2026-09-02T09:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260902-02",
+      "source_event_id": "DEMO-20260902-02",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-09-02T12:00:00-03:00",
+      "ended_at": "2026-09-02T14:00:00-03:00",
+      "meter_start_kwh": "531.000",
+      "meter_end_kwh": "543.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260902-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-02T12:00:00-03:00",
+          "interval_end": "2026-09-02T13:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260902-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-02T13:00:00-03:00",
+          "interval_end": "2026-09-02T14:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260902-03",
+      "source_event_id": "DEMO-20260902-03",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-02T16:00:00-03:00",
+      "ended_at": "2026-09-02T17:00:00-03:00",
+      "meter_start_kwh": "1000.000",
+      "meter_end_kwh": "1008.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260902-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-02T16:00:00-03:00",
+          "interval_end": "2026-09-02T17:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260903-01",
+      "source_event_id": "DEMO-20260903-01",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-03T08:00:00-03:00",
+      "ended_at": "2026-09-03T10:00:00-03:00",
+      "meter_start_kwh": "1008.000",
+      "meter_end_kwh": "1017.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260903-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-03T08:00:00-03:00",
+          "interval_end": "2026-09-03T09:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260903-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-03T09:00:00-03:00",
+          "interval_end": "2026-09-03T10:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260903-02",
+      "source_event_id": "DEMO-20260903-02",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-09-03T11:00:00-03:00",
+      "ended_at": "2026-09-03T12:00:00-03:00",
+      "meter_start_kwh": "543.000",
+      "meter_end_kwh": "547.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260903-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-03T11:00:00-03:00",
+          "interval_end": "2026-09-03T12:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260903-03",
+      "source_event_id": "DEMO-20260903-03",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-03T18:00:00-03:00",
+      "ended_at": "2026-09-03T19:00:00-03:00",
+      "meter_start_kwh": "1017.000",
+      "meter_end_kwh": "1022.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260903-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-03T18:00:00-03:00",
+          "interval_end": "2026-09-03T19:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260904-01",
+      "source_event_id": "DEMO-20260904-01",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-04T08:00:00-03:00",
+      "ended_at": "2026-09-04T10:00:00-03:00",
+      "meter_start_kwh": "1022.000",
+      "meter_end_kwh": "1039.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260904-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-04T08:00:00-03:00",
+          "interval_end": "2026-09-04T09:00:00-03:00",
+          "energy_kwh": "10.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260904-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-04T09:00:00-03:00",
+          "interval_end": "2026-09-04T10:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260904-02",
+      "source_event_id": "DEMO-20260904-02",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-09-04T10:00:00-03:00",
+      "ended_at": "2026-09-04T12:00:00-03:00",
+      "meter_start_kwh": "547.000",
+      "meter_end_kwh": "560.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260904-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-04T10:00:00-03:00",
+          "interval_end": "2026-09-04T11:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260904-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-04T11:00:00-03:00",
+          "interval_end": "2026-09-04T12:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260904-03",
+      "source_event_id": "DEMO-20260904-03",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-04T18:00:00-03:00",
+      "ended_at": "2026-09-04T19:00:00-03:00",
+      "meter_start_kwh": "1039.000",
+      "meter_end_kwh": "1048.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260904-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-04T18:00:00-03:00",
+          "interval_end": "2026-09-04T19:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260905-01",
+      "source_event_id": "DEMO-20260905-01",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-05T08:00:00-03:00",
+      "ended_at": "2026-09-05T09:00:00-03:00",
+      "meter_start_kwh": "1048.000",
+      "meter_end_kwh": "1055.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260905-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-05T08:00:00-03:00",
+          "interval_end": "2026-09-05T09:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260905-02",
+      "source_event_id": "DEMO-20260905-02",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-09-05T11:00:00-03:00",
+      "ended_at": "2026-09-05T12:00:00-03:00",
+      "meter_start_kwh": "560.000",
+      "meter_end_kwh": "566.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260905-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-05T11:00:00-03:00",
+          "interval_end": "2026-09-05T12:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260905-03",
+      "source_event_id": "DEMO-20260905-03",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-05T16:00:00-03:00",
+      "ended_at": "2026-09-05T17:00:00-03:00",
+      "meter_start_kwh": "1055.000",
+      "meter_end_kwh": "1062.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260905-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-05T16:00:00-03:00",
+          "interval_end": "2026-09-05T17:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260906-01",
+      "source_event_id": "DEMO-20260906-01",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-06T07:00:00-03:00",
+      "ended_at": "2026-09-06T08:00:00-03:00",
+      "meter_start_kwh": "1062.000",
+      "meter_end_kwh": "1070.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260906-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-06T07:00:00-03:00",
+          "interval_end": "2026-09-06T08:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260906-02",
+      "source_event_id": "DEMO-20260906-02",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-09-06T11:00:00-03:00",
+      "ended_at": "2026-09-06T12:00:00-03:00",
+      "meter_start_kwh": "566.000",
+      "meter_end_kwh": "572.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260906-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-06T11:00:00-03:00",
+          "interval_end": "2026-09-06T12:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260906-03",
+      "source_event_id": "DEMO-20260906-03",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-06T18:00:00-03:00",
+      "ended_at": "2026-09-06T20:00:00-03:00",
+      "meter_start_kwh": "1070.000",
+      "meter_end_kwh": "1083.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260906-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-06T18:00:00-03:00",
+          "interval_end": "2026-09-06T19:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260906-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-06T19:00:00-03:00",
+          "interval_end": "2026-09-06T20:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260907-01",
+      "source_event_id": "DEMO-20260907-01",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-07T08:00:00-03:00",
+      "ended_at": "2026-09-07T10:00:00-03:00",
+      "meter_start_kwh": "1083.000",
+      "meter_end_kwh": "1091.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260907-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-07T08:00:00-03:00",
+          "interval_end": "2026-09-07T09:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260907-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-07T09:00:00-03:00",
+          "interval_end": "2026-09-07T10:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260907-02",
+      "source_event_id": "DEMO-20260907-02",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-09-07T12:00:00-03:00",
+      "ended_at": "2026-09-07T13:00:00-03:00",
+      "meter_start_kwh": "572.000",
+      "meter_end_kwh": "578.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260907-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-07T12:00:00-03:00",
+          "interval_end": "2026-09-07T13:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260907-03",
+      "source_event_id": "DEMO-20260907-03",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-07T16:00:00-03:00",
+      "ended_at": "2026-09-07T17:00:00-03:00",
+      "meter_start_kwh": "1091.000",
+      "meter_end_kwh": "1096.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260907-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-07T16:00:00-03:00",
+          "interval_end": "2026-09-07T17:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260908-01",
+      "source_event_id": "DEMO-20260908-01",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-08T07:00:00-03:00",
+      "ended_at": "2026-09-08T09:00:00-03:00",
+      "meter_start_kwh": "1096.000",
+      "meter_end_kwh": "1111.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260908-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-08T07:00:00-03:00",
+          "interval_end": "2026-09-08T08:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260908-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-08T08:00:00-03:00",
+          "interval_end": "2026-09-08T09:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260908-02",
+      "source_event_id": "DEMO-20260908-02",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-09-08T11:00:00-03:00",
+      "ended_at": "2026-09-08T13:00:00-03:00",
+      "meter_start_kwh": "578.000",
+      "meter_end_kwh": "589.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260908-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-08T11:00:00-03:00",
+          "interval_end": "2026-09-08T12:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260908-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-08T12:00:00-03:00",
+          "interval_end": "2026-09-08T13:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260908-03",
+      "source_event_id": "DEMO-20260908-03",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-08T16:00:00-03:00",
+      "ended_at": "2026-09-08T17:00:00-03:00",
+      "meter_start_kwh": "1111.000",
+      "meter_end_kwh": "1120.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260908-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-08T16:00:00-03:00",
+          "interval_end": "2026-09-08T17:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260909-01",
+      "source_event_id": "DEMO-20260909-01",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-09T07:00:00-03:00",
+      "ended_at": "2026-09-09T08:00:00-03:00",
+      "meter_start_kwh": "1120.000",
+      "meter_end_kwh": "1130.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260909-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-09T07:00:00-03:00",
+          "interval_end": "2026-09-09T08:00:00-03:00",
+          "energy_kwh": "10.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260909-02",
+      "source_event_id": "DEMO-20260909-02",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-09-09T11:00:00-03:00",
+      "ended_at": "2026-09-09T12:00:00-03:00",
+      "meter_start_kwh": "589.000",
+      "meter_end_kwh": "594.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260909-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-09T11:00:00-03:00",
+          "interval_end": "2026-09-09T12:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260909-03",
+      "source_event_id": "DEMO-20260909-03",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-09T18:00:00-03:00",
+      "ended_at": "2026-09-09T19:00:00-03:00",
+      "meter_start_kwh": "1130.000",
+      "meter_end_kwh": "1135.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260909-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-09T18:00:00-03:00",
+          "interval_end": "2026-09-09T19:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260910-01",
+      "source_event_id": "DEMO-20260910-01",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-10T08:00:00-03:00",
+      "ended_at": "2026-09-10T09:00:00-03:00",
+      "meter_start_kwh": "1135.000",
+      "meter_end_kwh": "1140.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260910-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-10T08:00:00-03:00",
+          "interval_end": "2026-09-10T09:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260910-02",
+      "source_event_id": "DEMO-20260910-02",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-09-10T10:00:00-03:00",
+      "ended_at": "2026-09-10T12:00:00-03:00",
+      "meter_start_kwh": "594.000",
+      "meter_end_kwh": "605.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260910-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-10T10:00:00-03:00",
+          "interval_end": "2026-09-10T11:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260910-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-10T11:00:00-03:00",
+          "interval_end": "2026-09-10T12:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260910-03",
+      "source_event_id": "DEMO-20260910-03",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-10T16:00:00-03:00",
+      "ended_at": "2026-09-10T18:00:00-03:00",
+      "meter_start_kwh": "1140.000",
+      "meter_end_kwh": "1156.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260910-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-10T16:00:00-03:00",
+          "interval_end": "2026-09-10T17:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260910-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-10T17:00:00-03:00",
+          "interval_end": "2026-09-10T18:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260911-01",
+      "source_event_id": "DEMO-20260911-01",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-11T08:00:00-03:00",
+      "ended_at": "2026-09-11T10:00:00-03:00",
+      "meter_start_kwh": "1156.000",
+      "meter_end_kwh": "1167.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260911-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-11T08:00:00-03:00",
+          "interval_end": "2026-09-11T09:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260911-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-11T09:00:00-03:00",
+          "interval_end": "2026-09-11T10:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260911-02",
+      "source_event_id": "DEMO-20260911-02",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-09-11T12:00:00-03:00",
+      "ended_at": "2026-09-11T14:00:00-03:00",
+      "meter_start_kwh": "605.000",
+      "meter_end_kwh": "615.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260911-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-11T12:00:00-03:00",
+          "interval_end": "2026-09-11T13:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260911-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-11T13:00:00-03:00",
+          "interval_end": "2026-09-11T14:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260911-03",
+      "source_event_id": "DEMO-20260911-03",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-11T18:00:00-03:00",
+      "ended_at": "2026-09-11T20:00:00-03:00",
+      "meter_start_kwh": "1167.000",
+      "meter_end_kwh": "1182.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260911-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-11T18:00:00-03:00",
+          "interval_end": "2026-09-11T19:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260911-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-11T19:00:00-03:00",
+          "interval_end": "2026-09-11T20:00:00-03:00",
+          "energy_kwh": "9.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260912-01",
+      "source_event_id": "DEMO-20260912-01",
+      "user_id": "user-caio",
+      "unit_id": "unit-202",
+      "vehicle_id": "vehicle-202-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-12T07:00:00-03:00",
+      "ended_at": "2026-09-12T09:00:00-03:00",
+      "meter_start_kwh": "1182.000",
+      "meter_end_kwh": "1195.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260912-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-12T07:00:00-03:00",
+          "interval_end": "2026-09-12T08:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260912-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-12T08:00:00-03:00",
+          "interval_end": "2026-09-12T09:00:00-03:00",
+          "energy_kwh": "8.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260912-02",
+      "source_event_id": "DEMO-20260912-02",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-09-12T11:00:00-03:00",
+      "ended_at": "2026-09-12T13:00:00-03:00",
+      "meter_start_kwh": "615.000",
+      "meter_end_kwh": "622.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260912-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-12T11:00:00-03:00",
+          "interval_end": "2026-09-12T12:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260912-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-12T12:00:00-03:00",
+          "interval_end": "2026-09-12T13:00:00-03:00",
+          "energy_kwh": "4.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260912-03",
+      "source_event_id": "DEMO-20260912-03",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-12T18:00:00-03:00",
+      "ended_at": "2026-09-12T19:00:00-03:00",
+      "meter_start_kwh": "1195.000",
+      "meter_end_kwh": "1201.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260912-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-12T18:00:00-03:00",
+          "interval_end": "2026-09-12T19:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260913-01",
+      "source_event_id": "DEMO-20260913-01",
+      "user_id": "user-diana",
+      "unit_id": "unit-303",
+      "vehicle_id": "vehicle-303-a",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-13T06:00:00-03:00",
+      "ended_at": "2026-09-13T08:00:00-03:00",
+      "meter_start_kwh": "1201.000",
+      "meter_end_kwh": "1213.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260913-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-13T06:00:00-03:00",
+          "interval_end": "2026-09-13T07:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260913-01",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-13T07:00:00-03:00",
+          "interval_end": "2026-09-13T08:00:00-03:00",
+          "energy_kwh": "7.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260913-02",
+      "source_event_id": "DEMO-20260913-02",
+      "user_id": "user-ana",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-a",
+      "charger_id": "hca-g2-02",
+      "started_at": "2026-09-13T12:00:00-03:00",
+      "ended_at": "2026-09-13T14:00:00-03:00",
+      "meter_start_kwh": "622.000",
+      "meter_end_kwh": "631.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260913-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-13T12:00:00-03:00",
+          "interval_end": "2026-09-13T13:00:00-03:00",
+          "energy_kwh": "3.000",
+          "source": "synthetic"
+        },
+        {
+          "session_id": "DEMO-20260913-02",
+          "charger_id": "hca-g2-02",
+          "interval_start": "2026-09-13T13:00:00-03:00",
+          "interval_end": "2026-09-13T14:00:00-03:00",
+          "energy_kwh": "6.000",
+          "source": "synthetic"
+        }
+      ]
+    },
+    {
+      "id": "DEMO-20260913-03",
+      "source_event_id": "DEMO-20260913-03",
+      "user_id": "user-bruno",
+      "unit_id": "unit-101",
+      "vehicle_id": "vehicle-101-b",
+      "charger_id": "hca-g2-01",
+      "started_at": "2026-09-13T17:00:00-03:00",
+      "ended_at": "2026-09-13T18:00:00-03:00",
+      "meter_start_kwh": "1213.000",
+      "meter_end_kwh": "1218.000",
+      "tariff_brl_per_kwh": "1.00",
+      "status": "CLOSED",
+      "measurements": [
+        {
+          "session_id": "DEMO-20260913-03",
+          "charger_id": "hca-g2-01",
+          "interval_start": "2026-09-13T17:00:00-03:00",
+          "interval_end": "2026-09-13T18:00:00-03:00",
+          "energy_kwh": "5.000",
+          "source": "synthetic"
+        }
+      ]
+    }
+  ]
+}

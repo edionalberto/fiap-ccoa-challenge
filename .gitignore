@@ -7,3 +7,6 @@ __pycache__/
 docs/guia-estudo.md
 docs/slide-3-minutos.pptx
 docs/slide-3-minutos.png
+
+*.sqlite3
+data/condocarga.sqlite3
